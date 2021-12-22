@@ -1,5 +1,4 @@
 rm(list=ls())
-setwd('/home/niklas/Dropbox/doktorand/Matlabcodes/world_population/')
 library(raster)
 library(foreach)
 library(doMC)
@@ -12,8 +11,8 @@ registerDoMC(cores)
 source('world_pop_functions3.R')
 scen <- 1
 
-data_dir <- '/media/niklas/data2/world_population/data/' #DATA dir 
-out_dir <- '/media/niklas/data2/world_population/output/' #output dir
+data_dir <- 'data/' #DATA dir 
+out_dir <- 'output/' #output dir
 
 
 world <- readOGR(paste(data_dir,"WorldMap/",sep=""),layer="TM_WORLD_BORDERS03_fixed") #needed to remove island from south africa and Eq Guinea

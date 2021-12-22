@@ -11,15 +11,15 @@ source('world_pop_functions2.R')
 source('SDMTools_functions.R')
 
 ## make sure run settings file is started at 1 =run
-run_file <- "/media/niklas/data2/world_population/run_settings.txt"
+run_file <- "run_settings.txt"
 rv <- read.table(run_file,head=F)
 rv[,2] <- 1
 write.table(rv,run_file,col.names = F,row.names = F)
 
 ##settings
-tmp_folder <- '/media/data3/world_pop/tmp/'
-data_dir <- '/media/data3/world_pop/data/' #DATA dir 
-out_dir <- '/media/data3/world_pop/output/'
+tmp_folder <- 'tmp/'
+data_dir <- 'data/' #DATA dir 
+out_dir <- 'output/'
 pixels <- 900 ## number of poppixels in each urb frac pixel
 ssp_list <- c(  1  , 2, 3, 4, 5, 6)
 rcp_list <- c('2_6','4_5','7','3_4','6','8_5')
